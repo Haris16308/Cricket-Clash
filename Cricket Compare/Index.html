@@ -1,0 +1,305 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cricket Clash | Compare Players</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Website CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+
+        <!-- BRANDING -->
+        <div class="brand-row">
+
+            <a href="#home" class="brand-logo">
+                <img src="logo.png" alt="Cricket Clash Logo">
+            </a>
+
+            <div class="brand-text">
+
+                <h1>
+                    CRICKET <span>CLASH</span>
+                </h1>
+
+                <p>
+                    COMPARE PLAYERS. EXPLORE STATS. SETTLE THE DEBATE.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- HORIZONTAL LINE -->
+        <div class="header-line"></div>
+
+        <!-- NAVIGATION -->
+        <nav class="navbar">
+
+            <a href="#home" class="active">Home</a>
+
+            <a href="#compare">Compare Players</a>
+
+            <a href="#about">About</a>
+
+        </nav>
+
+    </header>
+
+    <!-- MAIN WEBSITE -->
+    <main>
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+
+            <div class="hero-content">
+
+                <p class="eyebrow">YOUR CRICKET. YOUR NUMBERS.</p>
+
+                <h2>
+                    Every Player.<br>
+                    <span>Every Stat.</span>
+                </h2>
+
+                <p class="hero-description">
+                    Compare your favourite cricket players, explore
+                    their performances and discover what the numbers say.
+                </p>
+
+                <a href="#compare" class="primary-button">
+                    Start Comparing <span>→</span>
+                </a>
+
+                <div class="hero-note">
+                    <span class="live-dot"></span>
+                    Made for cricket fans
+                </div>
+
+            </div>
+
+            <!-- VISUAL -->
+            <div class="hero-visual">
+
+                <div class="stadium-circle"></div>
+
+                <div class="hero-badge">
+                    <span>PLAYER</span>
+                    <strong>VS</strong>
+                    <span>PLAYER</span>
+                </div>
+
+                <div class="hero-ball">🏏</div>
+
+            </div>
+
+        </section>
+
+        <!-- PLAYER COMPARISON -->
+        <section class="comparison-section" id="compare">
+
+            <!-- SECTION TITLE -->
+            <div class="section-heading">
+
+                <div>
+                    <p class="eyebrow">THE MATCHUP</p>
+
+                    <h2>Player Comparison</h2>
+
+                    <p class="section-description">
+                        Choose two players and compare their batting records.
+                    </p>
+                </div>
+
+                <!-- FORMAT SELECTOR -->
+                <div class="format-control">
+
+                    <label for="format">MATCH FORMAT</label>
+
+                    <select id="format">
+                        <option value="odi">ODI</option>
+                        <option value="t20">T20 International</option>
+                        <option value="test">Test</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+            <!-- PLAYER CARDS -->
+            <div class="player-selection">
+
+                <!-- FIRST PLAYER -->
+                <div class="player-card">
+
+                    <div class="player-top">
+                        <span class="player-label">PLAYER 01</span>
+                        <span class="player-country">IND 🇮🇳</span>
+                    </div>
+
+                    <div class="player-avatar rohit-avatar">
+                        <span>RS</span>
+                    </div>
+
+                    <label for="player1">SELECT PLAYER</label>
+
+                    <select id="player1" class="player-select">
+
+                        <option value="rohit">Rohit Sharma</option>
+                        <option value="virat">Virat Kohli</option>
+                        <option value="dhoni">MS Dhoni</option>
+
+                    </select>
+
+                    <p class="player-role">Right-hand Batter</p>
+
+                </div>
+
+                <!-- VS -->
+                <div class="vs-circle">VS</div>
+
+                <!-- SECOND PLAYER -->
+                <div class="player-card">
+
+                    <div class="player-top">
+                        <span class="player-label">PLAYER 02</span>
+                        <span class="player-country">IND 🇮🇳</span>
+                    </div>
+
+                    <div class="player-avatar virat-avatar">
+                        <span>VK</span>
+                    </div>
+
+                    <label for="player2">SELECT PLAYER</label>
+
+                    <select id="player2" class="player-select">
+
+                        <option value="virat">Virat Kohli</option>
+                        <option value="rohit">Rohit Sharma</option>
+                        <option value="dhoni">MS Dhoni</option>
+
+                    </select>
+
+                    <p class="player-role">Right-hand Batter</p>
+
+                </div>
+
+            </div>
+
+            <!-- COMPARE BUTTON -->
+            <button class="compare-button" id="compareBtn">
+                Compare Statistics <span>→</span>
+            </button>
+
+            <!-- COMPARISON RESULTS -->
+            <div class="results" id="results">
+
+                <div class="results-heading">
+
+                    <div>
+                        <p class="eyebrow">HEAD TO HEAD</p>
+                        <h2>Batting Statistics</h2>
+                    </div>
+
+                    <span class="demo-label">DEMO DATA</span>
+
+                </div>
+
+                <div class="stat-table-wrapper">
+
+                    <table class="stat-table">
+
+                        <thead>
+                            <tr>
+                                <th>STATISTICS</th>
+                                <th id="name1">PLAYER 01</th>
+                                <th id="name2">PLAYER 02</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="statsBody">
+                            <!-- Statistics added through JavaScript -->
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+                <p class="data-note" id="dataNote">
+                    Demo statistics are shown for learning purposes.
+                </p>
+
+            </div>
+
+        </section>
+
+       
+<section class="about-section" id="about">
+
+    <p class="eyebrow">ABOUT THE PROJECT</p>
+
+    <h2>Beyond The <span>Boundary</span></h2>
+
+    <h3 class="about-caption">
+        Every player has a story. Every stat tells it.
+    </h3>
+
+    <p class="about-description">
+        Cricket Clash is a cricket player comparison website designed
+        for cricket fans. It allows users to compare two players
+        side by side and explore their performance through statistics
+        such as runs, batting average, strike rate, centuries,
+        and matches played. Our goal is to make cricket statistics
+        easy to understand and help fans explore player performances
+        in a simple and interactive way.
+    </p>
+
+</section>
+
+    </main>
+
+    
+<footer class="site-footer">
+
+    <div class="footer-brand">
+
+        <a href="#home" class="footer-logo">
+            <img src="logo.png" alt="Cricket Clash Logo">
+        </a>
+
+        <div class="footer-brand-text">
+
+            <h2>CRICKET <span>CLASH</span></h2>
+
+            <p>
+                COMPARE PLAYERS. EXPLORE STATS. SETTLE THE DEBATE.
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>CricketClash | Where Cricket Meets Statistics.
+© 2026 CricketClash. All Rights Reserved.</p>
+    </div>
+
+</footer>
+
+    <!-- WEBSITE JAVASCRIPT -->
+    <script src="script.js"></script>
+
+</body>
+</html>
